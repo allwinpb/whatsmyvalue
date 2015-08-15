@@ -10,7 +10,7 @@
 }
 
 .button-rows{
-	background-image: url(/assets/img/housewife.jpg);
+	background-image: url(/assets/img/housewife.png);
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-position: center;
@@ -21,9 +21,17 @@ html{
 	height: 100%;
 }
 body{
-	/*background: black;*/
 	width: 100%;
 	height: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+17,52b152+33,008a00+67,005700+83,002400+100;Green+3D+%231 */
+	background: #b4ddb4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #b4ddb4 0%, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4ddb4), color-stop(17%,#83c783), color-stop(33%,#52b152), color-stop(67%,#008a00), color-stop(83%,#005700), color-stop(100%,#002400)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=0 ); /* IE6-9 */
 }
 
 .button-row .edit-buttons{
@@ -31,6 +39,16 @@ body{
 }
 .button-row:hover .edit-buttons{
 	display: block;
+}
+.salary-box{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 44px;
+	font-size: 44px;
+	margin-top: -22px;
+	top:50%;
+	left:0px;
 }
 .location-holder{
 	/*border-top: 15px solid rgba(0,0,0,0.5);*/
