@@ -1,5 +1,5 @@
 $(function(){
-	$('.button-row').css('min-height',$(window).height()/5);
+	$('.button-row').css('min-height',$(window).height()/5.1);
 	if (navigator.geolocation)
 		navigator.geolocation.getCurrentPosition(function(position) {
 			$.getJSON('http://ws.geonames.org/countryCode', {
@@ -113,11 +113,11 @@ $(function(){
 	increment = function(idx){
 		var element = $(idx);
 		count = parseInt(element.text())+1;
-		if(count>=9){
-			element.text(8);
-		}else{
-			element.text(count);
-		}
+		// if(count>=9){
+		// 	element.text(8);
+		// }else{
+		element.text(count);
+		// }
 		assignMultiplier(element.attr('id'), element.text());
 	};
 

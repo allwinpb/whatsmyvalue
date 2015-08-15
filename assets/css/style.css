@@ -59,7 +59,10 @@ h1{
 h1 i{
 	font-weight: 400;
 }
-
+p{
+	font-weight: 300 !important;
+	font-style: italic;
+}
 #edit_uttons_1,
 #edit_uttons_2,
 #edit_uttons_3,
@@ -69,6 +72,7 @@ h1 i{
 #edit_uttons_7,
 #edit_uttons_8{
 	display: none;
+	text-align: center;
 }
 
 
