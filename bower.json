@@ -1,0 +1,24 @@
+{
+  "name": "glyco-web",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Holmusk/glyco-web",
+  "authors": [
+    "Allwin Panikulam <allwinpb@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "preen": {
+    "bootstrap": ["dist/css/*.min.css", "dist/fonts/*", "dist/js/*.min.js"],
+    "jquery": ["dist/*.min.js"]
+  },
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

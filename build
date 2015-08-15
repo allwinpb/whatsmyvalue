@@ -1,0 +1,6 @@
+echo Downloading vendor libraries && echo &&
+bower --config.directory=vendor install && echo &&
+echo Download complete && echo &&
+echo Finishing installation && echo &&
+preen --directory vendor && echo &&
+echo Done
