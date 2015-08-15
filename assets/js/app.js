@@ -81,5 +81,33 @@ $(function(){
 
 	});
 
+	// value increment/ decrement
+	// $(document).ready(function(){
+	// 	$("#plus_1").click(function(){
+	// 		var cooking = document.getElementById("badge1");
+	// 		cooking.val()+= 1;
+	// 	})
+	// });
 
+	increment = function(idx){
+		var element = $(idx);	
+		count = parseInt(element.text())+1;
+		if(count>=9){
+			element.text(8);
+		}else{
+			element.text(count);
+		}
+		
+	};
+
+	decrement = function(idx){
+		var element = $(idx);
+		count = parseInt(element.text())-1;
+		if(count < 0){
+			element.text(0);
+		}else{
+			element.text(count);
+		}
+		
+	}
 })
