@@ -27,4 +27,56 @@ $(function(){
 		// angle = angle + (Math.random()*10 - 5)*3.14/180;
 	}
 	setInterval(moveMap, 10);
+
+	// show and hide plus minus
+	$(document).ready(function(){
+		$("#button_field_1").hover(function(){
+			$("#edit_uttons_1").show();
+		},function(){
+			$("#edit_uttons_1").hide();
+		});
+
+		$("#button_field_2").hover(function(){
+			$("#edit_uttons_2").show();
+		},function(){
+			$("#edit_uttons_2").hide();
+		});
+
+		$("#button_field_3").hover(function(){
+			$("#edit_uttons_3").show();
+		},function(){
+			$("#edit_uttons_3").hide();
+		});
+
+		$("#button_field_4").hover(function(){
+			$("#edit_uttons_4").show();
+		},function(){
+			$("#edit_uttons_4").hide();
+		});
+
+		$("#button_field_5").hover(function(){
+			$("#edit_uttons_5").show();
+		},function(){
+			$("#edit_uttons_5").hide();
+		});
+
+		$("#button_field_6").hover(function(){
+			$("#edit_uttons_6").show();
+		},function(){
+			$("#edit_uttons_6").hide();
+		});
+
+		$("#button_field_7").hover(function(){
+			$("#edit_uttons_7").show();
+		},function(){
+			$("#edit_uttons_7").hide();
+		});
+
+		$("#button_field_8").hover(function(){
+			$("#edit_uttons_8").show();
+		},function(){
+			$("#edit_uttons_8").hide();
+		});
+
+	});
 })

@@ -26,12 +26,19 @@ body{
 	height: 100%;
 }
 
-.button-row .edit-buttons{
+#edit_uttons_1,
+#edit_uttons_2,
+#edit_uttons_3,
+#edit_uttons_4,
+#edit_uttons_5,
+#edit_uttons_6,
+#edit_uttons_7,
+#edit_uttons_8{
 	display: none;
 }
-.button-row:hover .edit-buttons{
-	display: block;
-}
+
+
+
 .location-holder{
 	/*border-top: 15px solid rgba(0,0,0,0.5);*/
 	/*border-left: 15px solid rgba(0,0,0,0.5);*/
