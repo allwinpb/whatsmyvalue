@@ -81,10 +81,27 @@ $(function(){
 	});
 
 	//Read the separate section rates
+	var sectionRates = {};
+	var countryRates = {};
 	$.ajax({
 		url: '/section-rates.csv',
 		success: function(rawCsv){
-			console.log(rawCsv.split('\n')[0].split(','))
+			var csv = rawCsv.split('\n');
+			for(var i=0; i < csv.length; i++){
+				sectionRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
+			}
+			console.log(sectionRates);
 		}
-	})
+	});
+	$.ajax({
+		url: '/country-rates.csv',
+		success: function(rawCsv){
+			var csv = rawCsv.split('\n');
+			for(var i=0; i < csv.length; i++){
+				countryRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
+			}
+			countryRates['Singapore'] = 7.11;
+			console.log(countryRates);
+		}
+	});
 })
