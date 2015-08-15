@@ -26,6 +26,12 @@ body{
 	height: 100%;
 }
 
+.button-row .edit-buttons{
+	display: none;
+}
+.button-row:hover .edit-buttons{
+	display: block;
+}
 .location-holder{
 	/*border-top: 15px solid rgba(0,0,0,0.5);*/
 	/*border-left: 15px solid rgba(0,0,0,0.5);*/

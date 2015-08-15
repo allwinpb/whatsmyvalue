@@ -7,12 +7,15 @@ $(function(){
 				lng: position.coords.longitude,
 				type: 'JSON'
 			}, function(result) {
-				alert(result.countryName);
+				// alert(result.countryName);
+				if(result.countryName !== undefined){
+					$('.location-holder').text(result.countryName);
+				}
 			});
 		});
 
 	//Move the map on the location button
-	var velocity = 1; angle = 0;
+	var velocity = 5; angle = -30*3.14/180;
 	var moveMap = function(){
 		var xy = $('.location-holder').css('background-position');
 		var x = parseInt(xy.split(' ')[0].split('px')[0]);
