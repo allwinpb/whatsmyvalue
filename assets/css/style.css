@@ -1,0 +1,38 @@
+.button-field{
+	font-size: 24px;
+	/*height: 36px;*/
+	min-width: 100px;
+	border: 10px solid black;
+	border-radius: 30px;
+	background-color: #333333;
+	padding: 5px 20px;
+	color: white;
+}
+
+.button-rows{
+	background-image: url(/assets/img/housewife.jpg);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: white;
+	width: 100%;
+	height: 100%;
+}
+
+.location-holder{
+	width: 80%;
+	position: absolute;
+	bottom: 0px;
+	left: 10%;
+	font-size: 24px;
+	padding: 20px;
+	text-align: center;
+	background-image: url(/assets/img/worldmap.jpg)
+}
