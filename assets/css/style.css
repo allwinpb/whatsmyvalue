@@ -21,18 +21,26 @@ html{
 	height: 100%;
 }
 body{
-	background: white;
+	/*background: black;*/
 	width: 100%;
 	height: 100%;
 }
 
 .location-holder{
+	/*border-top: 15px solid rgba(0,0,0,0.5);*/
+	/*border-left: 15px solid rgba(0,0,0,0.5);*/
+	/*border-right: 15px solid rgba(0,0,0,0.5);*/
 	width: 80%;
 	position: absolute;
 	bottom: 0px;
 	left: 10%;
-	font-size: 24px;
-	padding: 20px;
+	font-size: 32px;
+	padding: 10px;
 	text-align: center;
-	background-image: url(/assets/img/worldmap.jpg)
+	color: white;
+	font-weight: bold;
+	background-image: url(/assets/img/worldmap.jpg);
+	background-repeat: repeat;
+	border-top-left-radius: 1000px;
+	border-top-right-radius: 1000px;
 }
