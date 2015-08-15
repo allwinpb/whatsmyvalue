@@ -80,6 +80,29 @@ $(function(){
 
 	});
 
+
+	increment = function(idx){
+		var element = $(idx);
+		count = parseInt(element.text())+1;
+		if(count>=9){
+			element.text(8);
+		}else{
+			element.text(count);
+		}
+
+	};
+
+	decrement = function(idx){
+		var element = $(idx);
+		count = parseInt(element.text())-1;
+		if(count < 0){
+			element.text(0);
+		}else{
+			element.text(count);
+		}
+
+	}
+
 	//Read the separate section rates
 	var sectionRates = {};
 	var countryRates = {};
