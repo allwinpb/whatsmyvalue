@@ -80,6 +80,35 @@ $(function(){
 
 	});
 
+	var sectionRates = {};
+	var countryRates = {};
+	var sectionMultiplier = {};
+	var selectedCountry = "Singapore";
+
+	function assignMultiplier(id, count){
+		count = parseInt(count);
+		id = id.substr(id.length - 1);
+		var keyword = "";
+		if(id == '1'){
+			sectionMultiplier["cooking"] = count;
+		}else if(id == '2'){
+			sectionMultiplier["cleaning"] = count;
+		}else if(id == '3'){
+			sectionMultiplier["shopping"] = count;
+		}else if(id == '4'){
+			sectionMultiplier["babysitting"] = count;
+		}else if(id == '5'){
+			sectionMultiplier["laundry"] = count;
+		}else if(id == '6'){
+			sectionMultiplier["teaching"] = count;
+		}else if(id == '7'){
+			sectionMultiplier["elderly care"] = count;
+		}else if(id == '8'){
+			sectionMultiplier["accounting"] = count;
+		}
+		calculate();
+	}
+
 
 	increment = function(idx){
 		var element = $(idx);
@@ -89,7 +118,7 @@ $(function(){
 		}else{
 			element.text(count);
 		}
-
+		assignMultiplier(element.attr('id'), element.text());
 	};
 
 	decrement = function(idx){
@@ -100,21 +129,17 @@ $(function(){
 		}else{
 			element.text(count);
 		}
-
+		assignMultiplier(element.attr('id'), element.text());
 	}
 
 	//Read the separate section rates
-	var sectionRates = {};
-	var countryRates = {};
-	var sectionMultiplier = {};
-	var selectedCountry = "Singapore";
 	$.ajax({
 		url: '/section-rates.csv',
 		success: function(rawCsv){
 			var csv = rawCsv.split('\n');
 			for(var i=0; i < csv.length - 1; i++){
 				sectionRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
-				sectionMultiplier[csv[i].split(',')[0]] = 1;
+				sectionMultiplier[csv[i].split(',')[0]] = 0;
 			}
 			console.log(sectionRates);
 		}
@@ -132,13 +157,13 @@ $(function(){
 	});
 
 	function calculate(){
-		var final = 0;
+		var finalValue = 0;
 		for(i in sectionMultiplier){
-			final += sectionMultiplier[i]*sectionRates[i]*countryRates[selectedCountry]/countryRates["Singapore"];
+			finalValue += sectionMultiplier[i]*sectionRates[i]*countryRates[selectedCountry]/countryRates["Singapore"];
 		}
-		final *= 30;
-		$('.salary').text('$ ' + final);
-		return final;
+		finalValue *= 4.28;
+		$('.salary').text('$ ' + finalValue.toFixed(2));
+		return finalValue;
 	}
-	setInterval(calculate, 5000);
+	// setInterval(calculate, 5000);
 })

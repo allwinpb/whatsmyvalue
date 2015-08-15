@@ -2,11 +2,36 @@
 	font-size: 24px;
 	/*height: 36px;*/
 	min-width: 100px;
-	border: 10px solid black;
+	/*border: 10px solid black;*/
 	border-radius: 30px;
 	background-color: #333333;
 	padding: 5px 20px;
 	color: white;
+}
+
+#button_field_1{
+	background-color: #f12448;
+}
+#button_field_2{
+	background-color: #f64846;
+}
+#button_field_3{
+	background-color: #f4a13b;
+}
+#button_field_4{
+	background-color: #ebc52f;
+}
+#button_field_5{
+	background-color: #D2E927;
+}
+#button_field_6{
+	background-color: #ADE837;
+}
+#button_field_7{
+	background-color: #78EA92;
+}
+#button_field_8{
+	background-color: #7FE1EA;
 }
 
 .button-rows{
@@ -23,15 +48,8 @@ html{
 body{
 	width: 100%;
 	height: 100%;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+17,52b152+33,008a00+67,005700+83,002400+100;Green+3D+%231 */
-	background: #b4ddb4; /* Old browsers */
-	background: -moz-linear-gradient(top,  #b4ddb4 0%, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4ddb4), color-stop(17%,#83c783), color-stop(33%,#52b152), color-stop(67%,#008a00), color-stop(83%,#005700), color-stop(100%,#002400)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=0 ); /* IE6-9 */
+	background: transparent url(/assets/img/bg.jpg);
+	background-size: 100% 100%;
 }
 
 #edit_uttons_1,
