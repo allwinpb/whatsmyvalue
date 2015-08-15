@@ -83,25 +83,39 @@ $(function(){
 	//Read the separate section rates
 	var sectionRates = {};
 	var countryRates = {};
+	var sectionMultiplier = {};
+	var selectedCountry = "Singapore";
 	$.ajax({
 		url: '/section-rates.csv',
 		success: function(rawCsv){
 			var csv = rawCsv.split('\n');
-			for(var i=0; i < csv.length; i++){
+			for(var i=0; i < csv.length - 1; i++){
 				sectionRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
+				sectionMultiplier[csv[i].split(',')[0]] = 1;
 			}
 			console.log(sectionRates);
 		}
 	});
+	countryRates['Singapore'] = 7.11;
 	$.ajax({
 		url: '/country-rates.csv',
 		success: function(rawCsv){
 			var csv = rawCsv.split('\n');
-			for(var i=0; i < csv.length; i++){
+			for(var i=0; i < csv.length - 1; i++){
 				countryRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
 			}
-			countryRates['Singapore'] = 7.11;
 			console.log(countryRates);
 		}
 	});
+
+	function calculate(){
+		var final = 0;
+		for(i in sectionMultiplier){
+			final += sectionMultiplier[i]*sectionRates[i]*countryRates[selectedCountry]/countryRates["Singapore"];
+		}
+		final *= 30;
+		$('.salary').text('$ ' + final);
+		return final;
+	}
+	setInterval(calculate, 5000);
 })
