@@ -26,8 +26,7 @@ $(function(){
 		// velocity = velocity + Math.random()*2 - 1;
 		// angle = angle + (Math.random()*10 - 5)*3.14/180;
 	}
-
-	setInterval(moveMap, 10);
+	// setInterval(moveMap, 10);
 
 	// show and hide plus minus
 	$(document).ready(function(){
@@ -81,13 +80,6 @@ $(function(){
 
 	});
 
-	// value increment/ decrement
-	// $(document).ready(function(){
-	// 	$("#plus_1").click(function(){
-	// 		var cooking = document.getElementById("badge1");
-	// 		cooking.val()+= 1;
-	// 	})
-	// });
 
 	increment = function(idx){
 		var element = $(idx);	
@@ -110,4 +102,30 @@ $(function(){
 		}
 		
 	}
+
+	//Read the separate section rates
+	var sectionRates = {};
+	var countryRates = {};
+	$.ajax({
+		url: '/section-rates.csv',
+		success: function(rawCsv){
+			var csv = rawCsv.split('\n');
+			for(var i=0; i < csv.length; i++){
+				sectionRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
+			}
+			console.log(sectionRates);
+		}
+	});
+	$.ajax({
+		url: '/country-rates.csv',
+		success: function(rawCsv){
+			var csv = rawCsv.split('\n');
+			for(var i=0; i < csv.length; i++){
+				countryRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
+			}
+			countryRates['Singapore'] = 7.11;
+			console.log(countryRates);
+		}
+	});
+
 })
