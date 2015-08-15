@@ -26,8 +26,7 @@ $(function(){
 		// velocity = velocity + Math.random()*2 - 1;
 		// angle = angle + (Math.random()*10 - 5)*3.14/180;
 	}
-
-	setInterval(moveMap, 10);
+	// setInterval(moveMap, 10);
 
 	// show and hide plus minus
 	$(document).ready(function(){
@@ -81,5 +80,11 @@ $(function(){
 
 	});
 
-
+	//Read the separate section rates
+	$.ajax({
+		url: '/section-rates.csv',
+		success: function(rawCsv){
+			console.log(rawCsv.split('\n')[0].split(','))
+		}
+	})
 })
