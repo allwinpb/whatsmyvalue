@@ -26,6 +26,7 @@ $(function(){
 		// velocity = velocity + Math.random()*2 - 1;
 		// angle = angle + (Math.random()*10 - 5)*3.14/180;
 	}
+
 	setInterval(moveMap, 10);
 
 	// show and hide plus minus
@@ -79,4 +80,6 @@ $(function(){
 		});
 
 	});
+
+
 })
