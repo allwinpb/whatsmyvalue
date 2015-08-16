@@ -90,10 +90,10 @@ p{
 .salary-box{
 	transition: all 0.1s ease-out;
 }
-.salary-box:hover{
+/*.salary-box:hover{
 	transform: scale(2.0);
 }
-
+*/
 .location-holder{
 	/*border-top: 15px solid rgba(0,0,0,0.5);*/
 	/*border-left: 15px solid rgba(0,0,0,0.5);*/

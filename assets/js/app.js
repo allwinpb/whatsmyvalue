@@ -107,6 +107,13 @@ $(function(){
 			sectionMultiplier["accounting"] = count;
 		}
 		calculate();
+		$('.salary-box').css('transform', 'scale(2.0)');
+		setTimeout(function(){
+			var css = $('.salary-box').css('transform');
+			console.log(css);
+			if(css === 'matrix(2, 0, 0, 2, 0, 0)')
+				$('.salary-box').css('transform', 'scale(1.0)');
+		},500);
 	}
 
 
