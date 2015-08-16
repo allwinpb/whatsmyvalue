@@ -1,5 +1,5 @@
 $(function(){
-	$('.button-row').css('min-height',$(window).height()/5.1);
+	$('.button-row').css('min-height',$(window).height()/6);
 	if (navigator.geolocation)
 		navigator.geolocation.getCurrentPosition(function(position) {
 			$.getJSON('http://ws.geonames.org/countryCode', {
@@ -108,13 +108,20 @@ $(function(){
 			sectionMultiplier["accounting"] = count;
 		}
 		calculate();
-		$('.salary-box').css('transform', 'scale(2.0)');
-		setTimeout(function(){
-			var css = $('.salary-box').css('transform');
-			// console.log(css);
-			if(css === 'matrix(2, 0, 0, 2, 0, 0)')
-				$('.salary-box').css('transform', 'scale(1.0)');
-		},500);
+
+
+		
+	
+		$('.salary-box').animate({'font-size':'88px'},200,function(){
+			$('.salary-box').animate({'font-size':'44px'},200);
+		});
+	
+
+		
+		
+		
+			
+	
 	}
 
 
