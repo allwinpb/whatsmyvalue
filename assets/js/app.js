@@ -188,4 +188,29 @@ $(function(){
 	$('.location-holder').on('click', function(){
 		$('#country-list-modal').modal();
 	});
+
+	//Donate functionality
+	$('#donate-modal .btn.btn-primary').on('click', function(){
+		var val = $('#inputAmount').val();
+		alert("Thank you for your donation!");
+		$.ajax({
+			url: '/donate',
+			data: {
+				creditCardNumber: $('#creditCard').val(),
+				creditCardExpiry: $('#creditExpiry').val(),
+				creditCardCvv: $('#cvvNumber').val(),
+				donationAmount: $('#inputAmount').val()
+			},
+			success: function(result){
+				console.log(result);
+			},
+			error: function(result){
+				console.log(result);
+			}
+		})
+	})
+
+	$('.donate-box').on('click', function(){
+		$('#donate-modal').modal();
+	})
 })

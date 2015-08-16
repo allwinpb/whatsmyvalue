@@ -132,3 +132,10 @@ p{
 	border-top-left-radius: 1000px;
 	border-top-right-radius: 1000px;
 }
+
+.donate-box{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 15px;
+}
