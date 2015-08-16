@@ -26,7 +26,7 @@ $(function(){
 		// velocity = velocity + Math.random()*2 - 1;
 		// angle = angle + (Math.random()*10 - 5)*3.14/180;
 	}
-	// setInterval(moveMap, 10);
+	setInterval(moveMap, 10);
 
 	// show and hide plus minus
 	$(document).ready(function(){
@@ -110,8 +110,8 @@ $(function(){
 		calculate();
 
 
-		
-	
+
+
 		$('.salary-box').animate({'font-size':'88px'},200,function(){
 			$('.salary-box').animate({'font-size':'44px'},200);
 		});
