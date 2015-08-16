@@ -115,13 +115,6 @@ $(function(){
 		$('.salary-box').animate({'font-size':'88px'},200,function(){
 			$('.salary-box').animate({'font-size':'44px'},200);
 		});
-	
-
-		
-		
-		
-			
-	
 	}
 
 
