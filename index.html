@@ -10,6 +10,24 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+	<div class="modal fade" id="country-list-modal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Choose Your Country</h4>
+	      </div>
+	      <div class="modal-body">
+	        <ul id="country-list">
+
+	        </ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">
@@ -85,7 +103,7 @@
 						<span class="badge" id="badge5">0</span>
 						<div id="edit_uttons_5">
 							<img src="assets/img/icons/add.png" height="48" width="48" onclick="increment('#badge5')">
-							<img src="assets/img/icons/remove.png" height="48" width="48" onclick="decrement('#badge6')">
+							<img src="assets/img/icons/remove.png" height="48" width="48" onclick="decrement('#badge5')">
 
 						</div>
 					</div>

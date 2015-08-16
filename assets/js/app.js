@@ -86,6 +86,7 @@ $(function(){
 	var selectedCountry = "Singapore";
 
 	function assignMultiplier(id, count){
+		console.log(id, count);
 		count = parseInt(count);
 		id = id.substr(id.length - 1);
 		var keyword = "";
@@ -110,7 +111,7 @@ $(function(){
 		$('.salary-box').css('transform', 'scale(2.0)');
 		setTimeout(function(){
 			var css = $('.salary-box').css('transform');
-			console.log(css);
+			// console.log(css);
 			if(css === 'matrix(2, 0, 0, 2, 0, 0)')
 				$('.salary-box').css('transform', 'scale(1.0)');
 		},500);
@@ -159,7 +160,11 @@ $(function(){
 			for(var i=0; i < csv.length - 1; i++){
 				countryRates[csv[i].split(',')[0]] = parseFloat(csv[i].split(',')[1]);
 			}
-			console.log(countryRates);
+			// console.log(countryRates);
+			var countryList = Object.keys(countryRates);
+			for(var i=0; i<countryList.length; i++){
+				$('#country-list').append('<li>' + countryList[i] + '</li>');
+			}
 		}
 	});
 
@@ -173,4 +178,14 @@ $(function(){
 		return finalValue;
 	}
 	// setInterval(calculate, 5000);
+	$('#country-list-modal').on('click','li', function(){
+		var country = $(this).text().trim();
+		$('.location-holder').text(country);
+		selectedCountry = country;
+		$('#country-list-modal .modal-footer button').trigger('click');
+		calculate();
+	})
+	$('.location-holder').on('click', function(){
+		$('#country-list-modal').modal();
+	});
 })
